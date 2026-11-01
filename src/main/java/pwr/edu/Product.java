@@ -1,24 +1,84 @@
 package pwr.edu;
 
+/**
+ * Product that can be represented with product code, quantity
+ * and unit of measurement.
+ */
 public final class Product {
-    private String productCode;
-    private double quantity;
-    private String unit;
+  private String productCode;
+  private double quantity;
+  private String unit;
 
-    public Product() {}
+  /**
+   * Defualt constructor.
+   */
+  public Product() {
+  }
 
-    public Product(String productCode, double quantity, String unit) {
-        this.productCode = productCode;
-        this.quantity = quantity;
-        this.unit = unit;
-    }
+  /**
+   * Public constructor that sets all class members variables.
+   *
+   * @param productCode Code of the product
+   * @param quantity    quantity of product
+   * @param unit        unit of measurement
+   */
+  public Product(String productCode, double quantity, String unit) {
+    this.productCode = productCode;
+    this.quantity = quantity;
+    this.unit = unit;
+  }
 
-    public String getProductCode() { return productCode; }
-    public void setProductCode(String productCode) { this.productCode = productCode; }
+  /**
+   * Getter for productCode.
+   *
+   * @return code of the product
+   */
+  public String getProductCode() {
+    return productCode;
+  }
 
-    public double getQuantity() { return quantity; }
-    public void setQuantity(double quantity) { this.quantity = quantity; }
+  /**
+   * Setter for productCode.
+   *
+   * @param productCode product Code
+   */
+  public void setProductCode(String productCode) {
+    this.productCode = productCode;
+  }
 
-    public String getUnit() { return unit; }
-    public void setUnit(String unit) { this.unit = unit; }
+  /**
+   * Getter for quantity.
+   *
+   * @return quantity of the product
+   */
+  public double getQuantity() {
+    return quantity;
+  }
+
+  /**
+   * Setter for quantity.
+   *
+   * @param quantity quantity
+   */
+  public void setQuantity(double quantity) {
+    this.quantity = quantity;
+  }
+
+  /**
+   * Getter for unit of measurement.
+   *
+   * @return product's unit of measurement
+   */
+  public String getUnit() {
+    return unit;
+  }
+
+  /**
+   * Setter for unit of measurement.
+   *
+   * @param unit unit of measurement
+   */
+  public void setUnit(String unit) {
+    this.unit = unit;
+  }
 }
