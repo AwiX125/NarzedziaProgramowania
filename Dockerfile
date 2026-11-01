@@ -4,4 +4,4 @@ COPY pom.xml .
 COPY src ./src
 COPY programistyczne ./programistyczne
 RUN mvn clean package
-CMD ["java", "-jar", "target/Lab01-1.0.jar"]
+CMD ["java", "-jar", "target/NP-Projekt-1.0.jar"]
