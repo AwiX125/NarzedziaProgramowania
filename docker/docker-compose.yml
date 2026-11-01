@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: lab01-app
+    container_name: lab01_container
+    volumes:
+      - ../programistyczne:/app/data
