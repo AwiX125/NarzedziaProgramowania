@@ -1,0 +1,26 @@
+{
+  "customer": {
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "email": "jan.kowalski@pwr.edu.pl",
+    "phoneNumber": "+48123456789"
+  },
+  "products": [
+     {
+        "productCode": "123456-PL",
+        "quantity": 12,
+        "unit": "kg"
+      },
+       {
+        "productCode": "789021-PL",
+        "quantity": 4,
+        "unit": "g"
+      },
+       {
+        "productCode": "101244-PL",
+        "quantity": 86,
+        "unit":  "kg"
+      }
+
+  ]
+}

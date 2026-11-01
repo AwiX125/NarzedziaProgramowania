@@ -1,0 +1,26 @@
+{
+  "customer": {
+    "firstName": "Anna",
+    "lastName": "Nowak",
+    "email": "AnnaNowak20@pwr.edu.pl",
+    "phoneNumber": "+48223445667"
+  },
+  "products": [
+     {
+        "productCode": "009723-EN",
+        "quantity": 5,
+        "unit": "l"
+      },
+       {
+        "productCode": "998213-PL",
+        "quantity": 200,
+        "unit": "g"
+      },
+       {
+        "productCode": "251232-DE",
+        "quantity": 1,
+        "unit":  "kg"
+      }
+
+  ]
+}
