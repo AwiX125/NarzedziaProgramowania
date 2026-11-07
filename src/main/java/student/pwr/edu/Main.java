@@ -1,13 +1,13 @@
-package pwr.edu;
+package student.pwr.edu;
 
 
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import pwr.edu.module.AppConfig;
-import pwr.edu.module.Order;
-import pwr.edu.module.Product;
+import student.pwr.edu.module.AppConfig;
+import student.pwr.edu.module.Order;
+import student.pwr.edu.module.Product;
 import tools.jackson.databind.ObjectMapper;
 
 /**

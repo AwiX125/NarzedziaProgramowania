@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pwr.edu</groupId>
+    <groupId>student.pwr.edu</groupId>
     <artifactId>NP-Projekt</artifactId>
     <version>1.0</version>
 
@@ -37,6 +37,13 @@
             <artifactId>jackson-databind</artifactId>
             <version>3.2.3</version>
             <scope>compile</scope>
+        </dependency>
+
+        <!-- Source: https://github.com/cdimascio/dotenv-java -->
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>dotenv-java</artifactId>
+            <version>3.2.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -78,7 +85,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
-                    <mainClass>pwr.edu.Main</mainClass>
+                    <mainClass>student.pwr.edu.Main</mainClass>
                 </configuration>
                 <executions>
                     <execution>

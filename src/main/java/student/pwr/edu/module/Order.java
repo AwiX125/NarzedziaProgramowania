@@ -1,4 +1,4 @@
-package pwr.edu.module;
+package student.pwr.edu.module;
 
 import java.util.List;
 

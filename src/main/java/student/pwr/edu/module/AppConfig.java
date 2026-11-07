@@ -1,5 +1,6 @@
-package pwr.edu.module;
+package student.pwr.edu.module;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.PropertiesConfiguration;
@@ -11,7 +12,7 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
  * Singleton class that manages configuration of the App.
  */
 public final class AppConfig {
-  private static final String FILE_APPSETTINGS_PATH = "appsettings.properties";
+  private static String FILE_APPSETTINGS_PATH = "appsettings.properties";
   private static final String FILE_ORDERS_KEY = "data.dir";
 
   private static AppConfig instance;
@@ -24,6 +25,9 @@ public final class AppConfig {
    * @throws ConfigurationException if settings cannot be loaded properly.
    */
   private AppConfig() throws ConfigurationException {
+    Dotenv dotenv = Dotenv.load();
+    String ENV_FILE_APPSETTINGS_PATH = dotenv.get("DATA_DIRECTORY");
+
     Parameters params = new Parameters();
     FileBasedConfigurationBuilder<FileBasedConfiguration> builder =
             new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class)
@@ -32,8 +36,13 @@ public final class AppConfig {
 
     Configuration config = builder.getConfiguration();
 
-    fileDataPath = config.getString(FILE_ORDERS_KEY);
-    System.out.println("Plik z zamowieniami znajduje sie w katalogu: " + fileDataPath);
+    if (ENV_FILE_APPSETTINGS_PATH != null && !ENV_FILE_APPSETTINGS_PATH.trim().isEmpty()) {
+      fileDataPath = ENV_FILE_APPSETTINGS_PATH;
+      System.out.println("Ścieżka wczytana ze zmiennej środowiskowej (.env): " + fileDataPath);
+    } else {
+      fileDataPath = config.getString(FILE_ORDERS_KEY);
+      System.out.println("Ścieżka wczytana z pliku appsettings.properties: " + fileDataPath);
+    }
   }
 
   /**

@@ -1,4 +1,4 @@
-package pwr.edu.module;
+package student.pwr.edu.module;
 
 /**
  * Product that can be represented with product code, quantity

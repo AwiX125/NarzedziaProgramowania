@@ -1,4 +1,4 @@
-package pwr.edu.module;
+package student.pwr.edu.module;
 
 /**
  * Customer that can be represented with first name,

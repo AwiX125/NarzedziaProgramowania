@@ -54,7 +54,7 @@ programistyczne/
 src/
 └── main/
     └── java/
-        └── pwr/
+        └── student.pwr/
             └── edu/
                 ├── model/       # Customer, Order, Product entities
                 └── Main.java    # Application entry point
